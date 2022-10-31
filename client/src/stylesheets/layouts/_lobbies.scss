@@ -1,0 +1,7 @@
+.lobbies {
+    @include flex-item(row, flex-start, flex-start);
+
+    & > * {
+        margin: 0 1.5em;
+    }
+}

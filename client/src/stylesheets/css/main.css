@@ -1,0 +1,222 @@
+/*
+ * COLORS
+ */
+/*
+ * FONT SIZES
+ */
+/*
+ * FONT FAMILIES
+ */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+3. Allow percentage-based heights in the application
+*/
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+/*
+Typographic tweaks!
+4. Add accessible line-height
+5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #18191A;
+  font-family: "Outfit", sans-serif;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  /* Hide scrollbar for Chrome, Safari and Opera */
+}
+.hide-scrollbar ::-webkit-scrollbar {
+  display: none;
+}
+
+.genre {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFF;
+  margin: 1.2em 0;
+  padding: 0.75em 2.25em;
+  border-radius: 0.3em;
+  text-align: center;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  width: fit-content;
+  cursor: pointer;
+}
+.genre:hover {
+  filter: brightness(200%);
+}
+
+.lobby {
+  color: white;
+  border-radius: 0.25em;
+  min-width: max-content;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: relative;
+  cursor: pointer;
+}
+.lobby__image {
+  max-height: 18rem;
+  border-radius: inherit;
+  filter: brightness(0.8);
+}
+.lobby__meta {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  padding: 1em;
+}
+.lobby__meta .meta__name {
+  font-size: 1.5rem;
+}
+.lobby__meta .meta__people {
+  opacity: 0.7;
+  margin-bottom: 1em;
+}
+.lobby__meta .meta__genres {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+  overflow: auto;
+}
+.lobby__meta .meta__genres .genre {
+  padding: 0.2em 1em;
+  margin: 0 0.25em;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.lobby::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: black;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 47%, black 100%);
+  border-radius: inherit;
+  z-index: 1;
+}
+
+.genres {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-column-gap: 2em;
+  grid-template-areas: "navigation navigation navigation" "pane__left pane__main pane__right";
+  width: 100%;
+  padding: 0 2em;
+}
+
+.main, .pane__left, .pane__main, .pane__right {
+  height: 100%;
+}
+
+.pane__left {
+  grid-area: pane__left;
+  overflow: hidden;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: navigation;
+  color: white;
+  padding: 1em 0;
+}
+.navigation h2 {
+  font-family: "Lobster", cursive;
+  font-size: 2.5rem;
+}
+
+.lobbies {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.lobbies > * {
+  margin: 0 1.5em;
+}
+
+.pane__main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/*# sourceMappingURL=main.css.map */

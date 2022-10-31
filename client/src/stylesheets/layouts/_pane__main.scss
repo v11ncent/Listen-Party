@@ -1,0 +1,3 @@
+.pane__main {
+    @include flex-item(row, flex-start, flex-start);
+}

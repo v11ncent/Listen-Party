@@ -1,0 +1,12 @@
+.navigation {
+    @include flex-item(row, center, space-between);
+
+    grid-area: navigation;
+    color: white;
+    padding: 1em 0;
+
+    h2 {
+        font-family: $ff-logo;
+        font-size: 2.5rem;
+    }
+}

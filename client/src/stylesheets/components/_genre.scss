@@ -1,0 +1,16 @@
+.genre {
+    background-color: $color-genre-background;
+    color: $color-genre-font;
+    margin: 1.2em 0;
+    padding: 0.75em 2.25em;
+    border-radius: 0.3em;
+    text-align: center;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+    width: fit-content;
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(200%);
+    }
+}
