@@ -1,6 +1,6 @@
 .main {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto auto;
     grid-template-rows: repeat(2, auto);
     grid-column-gap: 2em; 
     grid-template-areas: "navigation navigation navigation"

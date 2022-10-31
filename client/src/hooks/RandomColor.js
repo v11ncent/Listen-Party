@@ -1,8 +1,14 @@
-const RandomColor = () => {
+const RandomColor = (mainColor, opacity) => {
     const randomValue = () => { return Math.floor(Math.random() * 255) }
-    const randomColor = `rgb(255, 0, ${randomValue()}, 0.75)`;
 
-    return randomColor;
+    if (mainColor === 'blue') {
+        return `rgb(${randomValue()}, 0, 255, ${opacity})`;
+    }
+
+    if (mainColor === 'red') {
+        return `rgb(255, 0, ${randomValue()}, ${opacity})`;
+    }
+    
 }
 
 export default RandomColor;

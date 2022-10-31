@@ -13,10 +13,10 @@ const Lobby = (props) => {
                 <h2 className="meta__name">{ name }</h2>
                 <p className="meta__people">{ `${people} listeners` }</p>
                 <ul className="meta__genres hide-scrollbar">
-                    <li className="genre">Ambient</li>
-                    <li className="genre">Ambient</li>
-                    <li className="genre">Ambient</li>
-                    <li className="genre">Ambient</li>
+                    <li className="genre" style={{ backgroundColor: RandomColor('blue', 0.95) }}>Ambient</li>
+                    <li className="genre" style={{ backgroundColor: RandomColor('blue', 0.95) }}>Ambient</li>
+                    <li className="genre" style={{ backgroundColor: RandomColor('blue', 0.95) }}>Ambient</li>
+                    <li className="genre" style={{ backgroundColor: RandomColor('blue', 0.95) }}>Ambient</li>
                 </ul>
             </div>
         </li>
