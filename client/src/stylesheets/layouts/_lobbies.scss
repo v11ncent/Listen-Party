@@ -1,5 +1,5 @@
 .lobbies {
-    @include flex-item(row, flex-start, flex-start);
+    @include flex-item(row, flex-start, center);
     flex-wrap: wrap;
 
     & > * {
