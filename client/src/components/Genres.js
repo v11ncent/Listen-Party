@@ -1,4 +1,4 @@
-import RandomColor from '../hooks/RandomColor';
+import RandomColor from '../Hooks/RandomColor';
 
 const Genres = (props) => {
     const genres = props.genres;

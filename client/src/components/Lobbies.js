@@ -1,5 +1,5 @@
 import Lobby from './Lobby';
-import RandomColor from '../hooks/RandomColor';
+import RandomColor from '../Hooks/RandomColor';
 
 const Lobbies = (props) => {
     const lobbies = props.lobbies;

@@ -1,6 +1,6 @@
 import './stylesheets/css/main.css';
-import Genres from './components/Genres';
-import Lobbies from './components/Lobbies';
+import Genres from './Components/Genres';
+import Lobbies from './Components/Lobbies';
 
 function App() {
   return (
