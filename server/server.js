@@ -1,11 +1,10 @@
-const ConnectToServer = require(`${__dirname}/Functions/ConnectToServer`);
+const ConnectToDatabase = require(`${__dirname}/Functions/ConnectToDatabase`);
 const FetchGenres = require(`${__dirname}/Functions/FetchGenres`);
-
 const express = require('express');
 const app = express();
 const port = 8000;
 
-ConnectToServer();
+ConnectToDatabase();
 
 app.get('/', async (req, res) => {
     const genres = await FetchGenres();
