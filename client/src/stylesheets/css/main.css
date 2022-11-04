@@ -108,6 +108,12 @@ body {
   width: fit-content;
   cursor: pointer;
 }
+.genre > p {
+  white-space: nowrap;
+  max-width: 15ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .genre:hover {
   filter: brightness(200%);
 }
@@ -174,9 +180,8 @@ body {
 
 .main {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 15rem auto;
   grid-template-rows: repeat(2, auto);
-  grid-column-gap: 2em;
   grid-template-areas: "navigation navigation navigation" "pane__left pane__main pane__right";
   width: 100%;
   padding: 0 2em;

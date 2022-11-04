@@ -9,6 +9,13 @@
     transition: all 0.3s ease;
     width: fit-content;
     cursor: pointer;
+    
+    & > p {
+        white-space: nowrap;
+        max-width: 15ch;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
     &:hover {
         filter: brightness(200%);

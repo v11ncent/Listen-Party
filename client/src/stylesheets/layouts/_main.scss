@@ -1,8 +1,7 @@
 .main {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 15rem auto;
     grid-template-rows: repeat(2, auto);
-    grid-column-gap: 2em; 
     grid-template-areas: "navigation navigation navigation"
                          "pane__left pane__main pane__right";
     width: 100%;

@@ -1,10 +1,24 @@
-import RandomColor from '../Hooks/RandomColor';
+import { useState, useEffect } from 'react';
+import GetGenres from '../hooks/GetGenres';
+import RandomColor from '../hooks/RandomColor';
 import lobbyBackgroundImage from '../media/lobby-background.jpg';
 
 const Lobby = (props) => {
     const name = props.name;
     const people = props.people || 0;
-    const genres = props.genres || null;
+    const initialGenres = ['Breakcore', 'Ambient', 'Speedcore'];
+    const [genres, setGenres] = useState(initialGenres);
+
+    useEffect(() => {
+        const fetchGenres = async () => setGenres(await GetGenres(3));
+        fetchGenres();
+    }, []);
+
+    const genreList = genres.map((genre) => 
+        <li className="genre" style={{ backgroundColor: RandomColor('red', 0.75) }}>
+            <p>{ genre }</p>
+        </li>
+    );
 
     return (
         <li className="lobby">
@@ -13,10 +27,7 @@ const Lobby = (props) => {
                 <h2 className="meta__name">{ name }</h2>
                 <p className="meta__people">{ `${people} listeners` }</p>
                 <ul className="meta__genres hide-scrollbar">
-                    <li className="genre" style={{ backgroundColor: RandomColor('red', 0.7) }}>Ambient</li>
-                    <li className="genre" style={{ backgroundColor: RandomColor('red', 0.7) }}>Ambient</li>
-                    <li className="genre" style={{ backgroundColor: RandomColor('red', 0.7) }}>Ambient</li>
-                    <li className="genre" style={{ backgroundColor: RandomColor('red', 0.7) }}>Ambient</li>
+                    { genreList }
                 </ul>
             </div>
         </li>
@@ -24,7 +35,3 @@ const Lobby = (props) => {
 }
 
 export default Lobby;
-
-
-
-
