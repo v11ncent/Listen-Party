@@ -180,11 +180,12 @@ body {
 
 .main {
   display: grid;
-  grid-template-columns: 15rem auto;
-  grid-template-rows: repeat(2, auto);
-  grid-template-areas: "navigation navigation navigation" "pane__left pane__main pane__right";
+  grid-template-columns: 15rem auto 20rem;
+  grid-template-rows: 7rem auto;
+  grid-template-areas: "navigation navigation pane__right" "pane__left pane__main pane__right";
   width: 100%;
   padding: 0 2em;
+  column-gap: 2em;
 }
 
 .main, .pane__left, .pane__main, .pane__right {
@@ -204,7 +205,6 @@ body {
   grid-area: navigation;
   color: white;
   padding: 1em 0;
-  margin-bottom: 1em;
 }
 .navigation h2 {
   font-family: "Lobster", cursive;
@@ -212,22 +212,21 @@ body {
 }
 
 .lobbies {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.lobbies > * {
-  margin: 0 1.5em;
-  margin-bottom: 1.5em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
 }
 
 .pane__main {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
+}
+
+.pane__right {
+  grid-area: pane__right;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /*# sourceMappingURL=main.css.map */

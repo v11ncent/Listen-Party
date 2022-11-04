@@ -1,13 +1,15 @@
 .main {
     display: grid;
-    grid-template-columns: 15rem auto;
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas: "navigation navigation navigation"
+    grid-template-columns: 15rem auto 20rem;
+    grid-template-rows: 7rem auto;
+    grid-template-areas: "navigation navigation pane__right"
                          "pane__left pane__main pane__right";
     width: 100%;
     padding: 0 2em;
+    column-gap: 2em;
 }
 
 .main, .pane__left, .pane__main, .pane__right {
     height: 100%;
+    
 }

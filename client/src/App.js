@@ -14,6 +14,9 @@ function App() {
       <main className="pane__main">
         <Lobbies />
       </main>
+      <section className="pane__right">
+
+      </section>
     </div>
   );
 }

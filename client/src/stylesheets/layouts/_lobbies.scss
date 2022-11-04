@@ -1,9 +1,5 @@
 .lobbies {
-    @include flex-item(row, flex-start, center);
-    flex-wrap: wrap;
-
-    & > * {
-        margin: 0 1.5em;
-        margin-bottom: 1.5em;
-    }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
 }
