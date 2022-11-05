@@ -205,6 +205,7 @@ button:hover {
 }
 
 .account {
+  width: 100%;
   color: rgba(255, 255, 255, 0.8);
 }
 .account > * {
@@ -218,6 +219,7 @@ button:hover {
   color: #FFF;
   background-color: #2050ec;
   padding: 0.5em 1em;
+  margin-left: 1em;
 }
 .account__link {
   display: flex;
@@ -233,6 +235,7 @@ button:hover {
 }
 
 .chat {
+  width: 100%;
   color: rgba(255, 255, 255, 0.8);
 }
 .chat > * {
@@ -246,9 +249,11 @@ button:hover {
   color: #FFF;
   background-color: #2050ec;
   padding: 0.5em 1em;
+  margin-left: 1em;
 }
 
 .creation {
+  width: 100%;
   color: rgba(255, 255, 255, 0.8);
 }
 .creation > * {
@@ -262,6 +267,7 @@ button:hover {
   color: #FFF;
   background-color: #2050ec;
   padding: 0.5em 1em;
+  margin-left: 1em;
 }
 
 .lobbies {
@@ -283,11 +289,12 @@ button:hover {
   grid-template-rows: 7rem auto;
   grid-template-areas: "navigation navigation workshop" "genres lobbies workshop";
   width: 100%;
+  height: fit-content;
   padding: 0 2em;
   column-gap: 2em;
 }
 
-.main, .genres, .lobbies, .workshop {
+.genres, .lobbies, .workshop {
   height: 100%;
 }
 
@@ -306,24 +313,25 @@ button:hover {
 
 .genres {
   grid-area: genres;
-  overflow: hidden;
 }
 .genres__list {
-  height: 100%;
   overflow-y: scroll;
+  height: 100%;
 }
 
 .workshop {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   grid-area: workshop;
   color: rgba(255, 255, 255, 0.8);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
-.workshop > * {
-  width: 100%;
+.workshop > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -5,10 +5,11 @@
     grid-template-areas: "navigation navigation workshop"
                          "genres lobbies workshop";
     width: 100%;
+    height: fit-content;
     padding: 0 2em;
     column-gap: 2em;
 }
 
-.main, .genres, .lobbies, .workshop {
+.genres, .lobbies, .workshop {
     height: 100%;
 }

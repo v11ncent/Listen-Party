@@ -1,7 +1,7 @@
 .lobbies {
     @include flex-item(row, flex-start, center);
     grid-area: lobbies;
-
+    
     &__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);

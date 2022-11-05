@@ -1,9 +1,8 @@
 .genres {
     grid-area: genres;
-    overflow: hidden;
 
     &__list {
-        height: 100%;
         overflow-y: scroll;
+        height: 100%;
     }
 }

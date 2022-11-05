@@ -6,6 +6,7 @@
 }
 
 @mixin workshop-section() {
+    width: 100%;
     color: $color-workshop-text;
 
     & > * {
@@ -21,5 +22,6 @@
         color: $color-workshop-button;
         background-color: $background-color-workshop-button;
         padding: $padding-workshop-button;
+        margin-left: $padding-workshop-items;
     }
 }

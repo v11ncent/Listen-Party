@@ -18,7 +18,11 @@ const Genres = () => {
         </li>
     );
 
-    return <ul className="genres__list hide-scrollbar">{ genreList }</ul>;
+    return (
+        <div>
+            <ul className="genres__list hide-scrollbar">{ genreList }</ul>
+        </div>
+    );
 }
 
 export default Genres;
