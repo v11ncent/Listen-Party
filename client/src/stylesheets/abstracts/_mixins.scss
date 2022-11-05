@@ -4,3 +4,22 @@
     align-items: $align-items;
     justify-content: $justify-content;
 }
+
+@mixin workshop-section() {
+    color: $color-workshop-text;
+
+    & > * {
+        padding: $padding-workshop-items;
+    }
+
+    &__title {
+        border-top: $border-workshop;
+        border-bottom: $border-workshop;
+    }
+
+    &__button {
+        color: $color-workshop-button;
+        background-color: $background-color-workshop-button;
+        padding: $padding-workshop-button;
+    }
+}

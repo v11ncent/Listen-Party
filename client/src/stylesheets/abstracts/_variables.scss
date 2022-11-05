@@ -3,10 +3,27 @@
  */
 
 $color-body: #18191A;
-$color-genre-background: rgb(255, 255, 255, 0.1);
-$color-genre-background-hover: rgb(255, 255, 255, 0.2);
 $color-genre-font: #FFF;
-$color-lobby-background: rgb(255, 255, 255, 0.1);
+$color-navigation: #FFF;
+$color-workshop-text: rgb(255, 255, 255, 0.8);
+$color-workshop-border: rgb(255, 255, 255, 0.1);
+$color-workshop-button: #FFF;
+
+/*
+ * BACKGROUND COLORS
+ */
+
+$background-color-genre: rgb(255, 255, 255, 0.1);
+$background-color-genre-hover: rgb(255, 255, 255, 0.2);
+$background-color-lobby: rgb(255, 255, 255, 0.1);
+$background-color-workshop-button: rgb(32, 80, 236);
+
+/*
+ * BORDER RADII
+ */
+
+$border-radius-general: 0.3em;
+
 
 /*
  * FONT SIZES
@@ -14,6 +31,20 @@ $color-lobby-background: rgb(255, 255, 255, 0.1);
 
 $fs-genre: 0.85rem;
 $fs-lobby-name: 1.5rem;
+
+/*
+ * PADDINGS
+ */
+
+$padding-workshop-items: 1em;
+$padding-workshop-button: 0.5em 1em;
+$padding-navigation: 1em;
+
+/*
+ * BORDERS
+ */
+
+$border-workshop: 1px solid $color-workshop-border;
 
 /*
  * FONT FAMILIES

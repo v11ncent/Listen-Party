@@ -9,13 +9,14 @@
 
 @import
   'components/genre',
-  'components/lobby';
+  'components/lobby',
+  'components/account',
+  'components/chat',
+  'components/creation';
 
 @import
-  'layouts/genres',
-  'layouts/main',
-  'layouts/pane__left',
-  'layouts/navigation',
   'layouts/lobbies',
-  'layouts/pane__main',
-  'layouts/pane__right';
+  'layouts/main',
+  'layouts/navigation',
+  'layouts/genres',
+  'layouts/workshop';

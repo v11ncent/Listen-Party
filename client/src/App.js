@@ -1,6 +1,7 @@
 import './stylesheets/css/main.css';
 import Genres from './Components/Genres';
 import Lobbies from './Components/Lobbies';
+import Workshop from './Components/Workshop';
 
 function App() {
   return (
@@ -8,14 +9,14 @@ function App() {
       <header className="navigation">
         <h2>Listen Party</h2>
       </header>
-      <aside className="pane__left">
+      <aside className="genres">
         <Genres />
       </aside>
-      <main className="pane__main">
+      <main className="lobbies">
         <Lobbies />
       </main>
-      <section className="pane__right">
-
+      <section className="workshop">
+        <Workshop />
       </section>
     </div>
   );

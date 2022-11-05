@@ -1,9 +1,9 @@
 .genre {
-    background-color: $color-genre-background;
+    background-color: $background-color-genre;
     color: $color-genre-font;
     margin-bottom: 1.2em;
     padding: 0.75em 2.25em;
-    border-radius: 0.3em;
+    border-radius: $border-radius-general;
     text-align: center;
     text-transform: capitalize;
     transition: all 0.3s ease;

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import GetGenres from '../hooks/GetGenres';
-import RandomColor from '../hooks/RandomColor';
+import GetGenres from '../Hooks/GetGenres';
+import RandomColor from '../Hooks/RandomColor';
 
 const Genres = () => {
     const [genres, setGenres] = useState([]);
@@ -18,7 +18,7 @@ const Genres = () => {
         </li>
     );
 
-    return <ul className="genres hide-scrollbar">{ genreList }</ul>;
+    return <ul className="genres__list hide-scrollbar">{ genreList }</ul>;
 }
 
 export default Genres;

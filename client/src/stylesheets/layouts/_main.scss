@@ -2,14 +2,13 @@
     display: grid;
     grid-template-columns: 15rem auto 20rem;
     grid-template-rows: 7rem auto;
-    grid-template-areas: "navigation navigation pane__right"
-                         "pane__left pane__main pane__right";
+    grid-template-areas: "navigation navigation workshop"
+                         "genres lobbies workshop";
     width: 100%;
     padding: 0 2em;
     column-gap: 2em;
 }
 
-.main, .pane__left, .pane__main, .pane__right {
+.main, .genres, .lobbies, .workshop {
     height: 100%;
-    
 }

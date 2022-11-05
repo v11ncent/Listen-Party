@@ -2,7 +2,7 @@
     color: white;
     border-radius: 0.25em;
     min-width: max-content;
-    background-color: $color-lobby-background;
+    background-color: $background-color-lobby;
     position: relative;
     cursor: pointer;
 
@@ -56,7 +56,7 @@
         width: 100%;
         background: rgb(0,0,0);
         background: linear-gradient(180deg, rgba(0,0,0,0) 47%, rgba(0,0,0,1) 100%); 
-        border-radius: inherit;
+        border-radius: $border-radius-general;
         z-index: 1;
     }
 }

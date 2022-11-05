@@ -4,6 +4,16 @@ body {
     font-family: $ff-main;
 }
 
+button {
+    border: 0;
+    border-radius: $border-radius-general;
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(125%);
+    }
+}
+
 .hide-scrollbar {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -12,4 +22,14 @@ body {
      ::-webkit-scrollbar {
         display: none;
     }
+}
+
+.hide-visually {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
 }

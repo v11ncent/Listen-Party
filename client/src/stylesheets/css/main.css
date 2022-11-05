@@ -2,7 +2,19 @@
  * COLORS
  */
 /*
+ * BACKGROUND COLORS
+ */
+/*
+ * BORDER RADII
+ */
+/*
  * FONT SIZES
+ */
+/*
+ * PADDINGS
+ */
+/*
+ * BORDERS
  */
 /*
  * FONT FAMILIES
@@ -85,6 +97,15 @@ body {
   font-family: "Outfit", sans-serif;
 }
 
+button {
+  border: 0;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+button:hover {
+  filter: brightness(125%);
+}
+
 .hide-scrollbar {
   -ms-overflow-style: none;
   /* IE and Edge */
@@ -94,6 +115,16 @@ body {
 }
 .hide-scrollbar ::-webkit-scrollbar {
   display: none;
+}
+
+.hide-visually {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .genre {
@@ -169,32 +200,95 @@ body {
   width: 100%;
   background: black;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 47%, black 100%);
-  border-radius: inherit;
+  border-radius: 0.3em;
   z-index: 1;
 }
 
-.genres {
-  height: 100%;
-  overflow-y: scroll;
+.account {
+  color: rgba(255, 255, 255, 0.8);
+}
+.account > * {
+  padding: 1em;
+}
+.account__title {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.account__button {
+  color: #FFF;
+  background-color: #2050ec;
+  padding: 0.5em 1em;
+}
+.account__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  color: rgba(255, 255, 255, 0.8);
+}
+.account__link .link__icon {
+  margin-right: 0.5em;
+  transform: scale(0.75);
+  fill: rgba(255, 255, 255, 0.8);
+}
+
+.chat {
+  color: rgba(255, 255, 255, 0.8);
+}
+.chat > * {
+  padding: 1em;
+}
+.chat__title {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.chat__button {
+  color: #FFF;
+  background-color: #2050ec;
+  padding: 0.5em 1em;
+}
+
+.creation {
+  color: rgba(255, 255, 255, 0.8);
+}
+.creation > * {
+  padding: 1em;
+}
+.creation__title {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.creation__button {
+  color: #FFF;
+  background-color: #2050ec;
+  padding: 0.5em 1em;
+}
+
+.lobbies {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  grid-area: lobbies;
+}
+.lobbies__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
 }
 
 .main {
   display: grid;
   grid-template-columns: 15rem auto 20rem;
   grid-template-rows: 7rem auto;
-  grid-template-areas: "navigation navigation pane__right" "pane__left pane__main pane__right";
+  grid-template-areas: "navigation navigation workshop" "genres lobbies workshop";
   width: 100%;
   padding: 0 2em;
   column-gap: 2em;
 }
 
-.main, .pane__left, .pane__main, .pane__right {
+.main, .genres, .lobbies, .workshop {
   height: 100%;
-}
-
-.pane__left {
-  grid-area: pane__left;
-  overflow: hidden;
 }
 
 .navigation {
@@ -203,30 +297,33 @@ body {
   align-items: center;
   justify-content: space-between;
   grid-area: navigation;
-  color: white;
-  padding: 1em 0;
+  color: #FFF;
 }
 .navigation h2 {
   font-family: "Lobster", cursive;
   font-size: 2.5rem;
 }
 
-.lobbies {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2em;
+.genres {
+  grid-area: genres;
+  overflow: hidden;
+}
+.genres__list {
+  height: 100%;
+  overflow-y: scroll;
 }
 
-.pane__main {
+.workshop {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.pane__right {
-  grid-area: pane__right;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: workshop;
+  color: rgba(255, 255, 255, 0.8);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+.workshop > * {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
