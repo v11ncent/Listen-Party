@@ -1,4 +1,4 @@
-import RandomColor from '../Hooks/RandomColor';
+import RandomColor from '../Functions/RandomColor';
 import lobbyBackgroundImage from '../media/lobby-background.jpg';
 
 const Lobby = (props) => {
@@ -7,8 +7,8 @@ const Lobby = (props) => {
     const genres = props.genres || [];
 
     const genreList = genres.map((genre) => 
-        <li className="genre">
-            <p>{ genre }</p>
+        <li className="genre" key={ genre[0] }>
+            <p>{ genre[1] }</p>
         </li>
     );
 

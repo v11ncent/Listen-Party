@@ -14,14 +14,14 @@
     }
 
     &__title {
-        border-top: $border-workshop;
+        color: $color-workshop-text-title;
         border-bottom: $border-workshop;
     }
+}
 
-    &__button {
-        color: $color-workshop-button;
-        background-color: $background-color-workshop-button;
-        padding: $padding-workshop-button;
-        margin-left: $padding-workshop-items;
-    }
+@mixin button() {
+    color: $color-workshop-button;
+    background-color: $background-color-workshop-button;
+    padding: $padding-workshop-button;
+    margin-top: 1em;
 }

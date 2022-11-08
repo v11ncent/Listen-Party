@@ -102,8 +102,27 @@ button {
   border-radius: 0.3em;
   cursor: pointer;
 }
-button:hover {
-  filter: brightness(125%);
+
+label {
+  display: inline-block;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type=submit] {
+  cursor: pointer;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  border: 0;
+  border-radius: 0.3em;
 }
 
 .hide-scrollbar {
@@ -212,14 +231,8 @@ button:hover {
   padding: 1em;
 }
 .account__title {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-.account__button {
-  color: #FFF;
-  background-color: #2050ec;
-  padding: 0.5em 1em;
-  margin-left: 1em;
 }
 .account__link {
   display: flex;
@@ -242,14 +255,8 @@ button:hover {
   padding: 1em;
 }
 .chat__title {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-.chat__button {
-  color: #FFF;
-  background-color: #2050ec;
-  padding: 0.5em 1em;
-  margin-left: 1em;
 }
 
 .creation {
@@ -260,14 +267,27 @@ button:hover {
   padding: 1em;
 }
 .creation__title {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-.creation__button {
+.creation .form__label:first-child, .creation .form legend {
+  margin-bottom: 0.75em;
+  padding: 0;
+}
+.creation .form__text {
+  margin-bottom: 1.5em;
+  padding: 0.35em 0.5em;
+  border-radius: 0.2em;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.creation .form__checkbox {
+  margin-right: 0.5em;
+}
+.creation .form__button {
   color: #FFF;
   background-color: #2050ec;
   padding: 0.5em 1em;
-  margin-left: 1em;
+  margin-top: 1em;
 }
 
 .lobbies {
@@ -276,6 +296,7 @@ button:hover {
   align-items: flex-start;
   justify-content: center;
   grid-area: lobbies;
+  margin-bottom: 2em;
 }
 .lobbies__list {
   display: grid;
@@ -287,7 +308,7 @@ button:hover {
   display: grid;
   grid-template-columns: 15rem auto 20rem;
   grid-template-rows: 7rem auto;
-  grid-template-areas: "navigation navigation workshop" "genres lobbies workshop";
+  grid-template-areas: "navigation . workshop" "genres lobbies workshop";
   width: 100%;
   height: fit-content;
   padding: 0 2em;
