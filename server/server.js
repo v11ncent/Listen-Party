@@ -21,7 +21,7 @@ app.get('/', async (req, res) => {
         res.send(genres);
     }
     catch (error) {
-        console.log("ERROR FETCHING GENRES\n", error);
+        console.error("ERROR FETCHING GENRES\n", error);
         res.sendStatus(500);
     }
 });

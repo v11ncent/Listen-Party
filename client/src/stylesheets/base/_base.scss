@@ -2,6 +2,7 @@ body {
     @include flex-item();
     background-color: $color-body;
     font-family: $ff-main;
+    background-image: url("https://transparenttextures.com/patterns/egg-shell.png");
 }
 
 button {
