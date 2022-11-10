@@ -30,7 +30,7 @@ app.post('/create', async (req, res) => {
     const requestParams = req.body.params;
 
     try {
-        CreateLobby(requestParams.name, requestParams.genres[0]);
+        CreateLobby(requestParams.name, requestParams.genres[0].genre_id);
         res.sendStatus(200);
     }
     catch (error) {

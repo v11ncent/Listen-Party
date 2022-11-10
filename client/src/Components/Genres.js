@@ -14,6 +14,7 @@ const Genres = () => {
         fetchGenres(10);
     }, []);
 
+    console.log(genres);
 
     genresList = genres.map((genre) =>
         <li className="genre" key={ genre.genre_id } style={{ backgroundColor: RandomColor('red', 0.75) }}>
