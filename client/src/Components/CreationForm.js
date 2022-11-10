@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import PostLobby from "../Functions/PostLobby";
 import GetGenres from "../Functions/GetGenres";
+import TextInput from "./TextInput";
 // https://www.freecodecamp.org/news/beginner-react-project-build-basic-forms-using-react-hooks/
 
 const CreationForm = () => {
@@ -28,26 +29,14 @@ const CreationForm = () => {
     return (
         <form action="http://localhost:8080/create" method="post" className="form" onSubmit={ handleSubmit }>
             <div>
-                <label htmlFor="lobbyName"className="form__label">Enter lobby name</label>
-                <input 
-                    type="text" 
-                    name="name" 
-                    placeholder="Lobby" 
-                    className="form__text"
-                    value={ values.name }
-                    onChange={ handleNameChange }
-                />
+                <label htmlFor="lobbyName" className="form__label">Enter lobby name</label>
+                <TextInput name = "name" placeholder = "Lobby" />
             </div>
             <fieldset>
                 <legend>Choose some genres</legend>
                 <div>
-                    <input type="checkbox" id="scales" name="scales" checked />
-                    <label htmlFor="scales">Scales</label>
-                </div>
-
-                <div>
-                    <input type="checkbox" id="horns" name="horns" />
-                    <label htmlFor="horns">Horns</label>
+                    <input type="checkbox" id="ambient" name="ambient" className="form__checkbox" checked />
+                    <label htmlFor="ambient">Ambient</label>
                 </div>
             </fieldset>
             <div>

@@ -15,7 +15,7 @@ const Genres = () => {
     }, []);
 
 
-    genresList = genres.map((genre) => 
+    genresList = genres.map((genre) =>
         <li className="genre" key={ genre.genre_id } style={{ backgroundColor: RandomColor('red', 0.75) }}>
             <p>{ genre.genre_name }</p>
         </li>
