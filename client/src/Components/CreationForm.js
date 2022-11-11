@@ -4,6 +4,7 @@ import GetGenres from "../Functions/GetGenres";
 import TextInput from "./TextInput";
 import CheckboxInput from "./CheckboxInput";
 // https://www.freecodecamp.org/news/beginner-react-project-build-basic-forms-using-react-hooks/
+// https://reactjs.org/docs/forms.html
 
 const initialValues = { 
     name: 'Lobby', 
@@ -17,7 +18,7 @@ const CreationForm = () => {
         const target = event.target;
         const name = target.name;
         const value = target.type === 'checkbox' ? target.checked : target.value;
-        
+
         setValues({
             ...values,
             [name]: value
