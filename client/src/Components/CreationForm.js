@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import PostLobby from "../Functions/PostLobby";
-import GetGenres from "../Functions/GetGenres";
 import TextInput from "./TextInput";
 import CheckboxInput from "./CheckboxInput";
 // https://www.freecodecamp.org/news/beginner-react-project-build-basic-forms-using-react-hooks/

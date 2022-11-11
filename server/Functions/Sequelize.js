@@ -1,4 +1,4 @@
-require('dotenv').config({ path: `${__dirname}/../../.env` });
+require('dotenv').config({ path: `${__dirname}/../.env` });
 const { Sequelize } = require('sequelize');
 const db_ip = process.env.CONNECTION_IP;
 const db_name = process.env.DB_NAME;

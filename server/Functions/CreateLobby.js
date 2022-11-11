@@ -1,4 +1,3 @@
-const Sequelize = require('sequelize');
 const sequelize = require(`${__dirname}/Sequelize.js`);
 const Lobby = require(`${__dirname}/../Models/Lobby`)(sequelize);
 

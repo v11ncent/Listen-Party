@@ -1,4 +1,3 @@
-import RandomColor from '../Functions/RandomColor';
 import lobbyBackgroundImage from '../media/lobby-background.jpg';
 
 const Lobby = (props) => {

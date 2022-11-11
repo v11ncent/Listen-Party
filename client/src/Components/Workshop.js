@@ -1,6 +1,3 @@
-import { useState, useEffect } from 'react';
-import GetGenres from '../Functions/GetGenres';
-import RandomColor from '../Functions/RandomColor';
 import CreationForm from './CreationForm';
 
 const Workshop = () => {
