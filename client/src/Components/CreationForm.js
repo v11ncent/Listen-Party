@@ -2,43 +2,52 @@ import { useState, useEffect } from "react";
 import PostLobby from "../Functions/PostLobby";
 import GetGenres from "../Functions/GetGenres";
 import TextInput from "./TextInput";
+import CheckboxInput from "./CheckboxInput";
 // https://www.freecodecamp.org/news/beginner-react-project-build-basic-forms-using-react-hooks/
 
+const initialValues = { 
+    name: 'Lobby', 
+    genres: [{ genre_id: 1, genre_name: 'Ambient' }] 
+};
+
 const CreationForm = () => {
-    const initialValues = { name: 'Lobby', genres: [{ genre_id: 1, genre_name: 'Ambient' }] };
     const [values, setValues] = useState(initialValues);
-    const [genres, setGenres] = useState([]);
-
-    useEffect(() => {
-        (async () => setGenres(await GetGenres(10)))();
-    }, []);
-
-    const handleNameChange = (event) => {
-        setValues((values) => ({
+    
+    const handleInputChange = (event) => {
+        const target = event.target;
+        const name = target.name;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        
+        setValues({
             ...values,
-            name: event.target.value 
-        }));
+            [name]: value
+        });
     }
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        setValues(initialValues);
         await PostLobby(values);
+        setValues(initialValues);
     }
 
     return (
         <form action="http://localhost:8080/create" method="post" className="form" onSubmit={ handleSubmit }>
-            <div>
-                <label htmlFor="lobbyName" className="form__label">Enter lobby name</label>
-                <TextInput name = "name" placeholder = "Lobby" />
-            </div>
-            {/* <fieldset>
+            <TextInput 
+                name = "name" 
+                label = "Lobby name" 
+                value = { values.name }
+                onChange = { handleInputChange } 
+            />
+            <fieldset>
                 <legend>Choose some genres</legend>
-                <div>
-                    <input type="checkbox" id="ambient" name="ambient" className="form__checkbox" checked />
-                    <label htmlFor="ambient">Ambient</label>
-                </div>
-            </fieldset> */}
+                <CheckboxInput 
+                    name = "ambient" 
+                    label = "Ambient"
+                    onChange = { handleInputChange }
+                />
+                <CheckboxInput name = "breakcore" label = "Breakcore" />
+                <CheckboxInput name = "dnb" label = "DnB" />
+            </fieldset>
             <div>
                 <input type="submit" value="Create lobby" className="form__button"></input>
             </div>
@@ -47,3 +56,7 @@ const CreationForm = () => {
 }
 
 export default CreationForm;
+
+// useEffect(() => {
+    //     (async () => setGenres(await GetGenres(10)))();
+    // }, []);

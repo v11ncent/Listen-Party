@@ -1,0 +1,47 @@
+.creation {
+    @include workshop-section();
+
+    .form {
+        &__label:first-child, legend {
+            margin-bottom: 0.75em;
+            padding: 0;
+        }
+
+        &__text {
+            margin-bottom: 1.5em;
+            padding: 0.35em 0.5em;
+            border-radius: 0.2em;
+            background-color: rgb(255, 255, 255, 0.9);
+        }
+
+        &__checkbox {
+            margin-right: 0.5em;
+        }
+
+        &__button {
+            @include button();
+        }
+    }
+}
+
+
+// <form action="" method="post" className="form">
+// <div>
+//     <label htmlFor="lobbyName" className="form__label">Enter lobby name</label>
+//     <input type="text" name="name" required className="form__text"></input>
+// </div>
+// <fieldset>
+//     <legend>Choose some genres</legend>
+//     <div>
+//         <input type="checkbox" name="electronica" className="form__checkbox"></input>
+//         <label htmlFor="electronica" className="form__label">Electronica</label>
+//     </div>
+//     <div>
+//         <input type="checkbox" name="phonk" className="form__checkbox"></input>
+//         <label htmlFor="phonk" className="form__label">Phonk</label>
+//     </div>
+// </fieldset>
+// <div>
+//     <input type="submit" value="Create lobby" className="form__button"></input>
+// </div>
+// </form>

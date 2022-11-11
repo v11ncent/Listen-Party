@@ -1,0 +1,14 @@
+.account {
+    @include workshop-section();
+
+    &__link {
+        @include flex-item(row, center, flex-start);
+        color: $color-workshop-text;
+
+        .link__icon {
+            margin-right: 0.5em;
+            transform: scale(0.75);
+            fill: $color-workshop-text;
+        }
+    }
+}

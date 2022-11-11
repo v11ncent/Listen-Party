@@ -1,0 +1,13 @@
+.workshop {
+    grid-area: workshop;
+
+    color: $color-workshop-text;
+    border-left: $border-workshop;
+
+    & > div {
+        @include flex-item(column, flex-start, space-between);
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+}
