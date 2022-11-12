@@ -5,15 +5,16 @@ import Error from './Routes/Error';
 import Login from './Routes/Login';
 import Main from './Routes/Main';
 import { Auth0Provider } from '@auth0/auth0-react';
-import './stylesheets/css/main.css';
 import {
   createBrowserRouter,
   RouterProvider,
   Route
 } from 'react-router-dom';
+import './stylesheets/css/main.css';
+
 const AUTH0_DOMAIN = process.env.REACT_APP_AUTH0_DOMAIN;
 const AUTH0_CLIENT = process.env.REACT_APP_AUTH0_CLIENT;
-console.log(AUTH0_DOMAIN);
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,21 +28,22 @@ const router = createBrowserRouter([
       {
         path: "/app",
         element: <Main />
+      },
+      {
+        path: "/lobby/:lobbyId",
+        element: <h1>Lobby</h1>
       }
     ]
   }
-  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Auth0Provider
-    domain={ AUTH0_DOMAIN }
-    clientId={ AUTH0_CLIENT }
-    redirectUri={`${window.location.origin}/app`}
-    >
-      <RouterProvider router = { router } />
-    </Auth0Provider>
-  </React.StrictMode>
+  <Auth0Provider
+  domain={ AUTH0_DOMAIN }
+  clientId={ AUTH0_CLIENT }
+  redirectUri={`${window.location.origin}/app`}
+  >
+    <RouterProvider router = { router } />
+  </Auth0Provider>
 );

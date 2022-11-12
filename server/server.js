@@ -1,5 +1,6 @@
 const ConnectToDatabase = require(`${__dirname}/Functions/ConnectToDatabase`);
 const GetGenres = require(`${__dirname}/Functions/GetGenres`);
+const GetLobbies = require('./Functions/GetLobbies');
 const CreateLobby = require(`${__dirname}/Functions/CreateLobby`);
 const express = require('express');
 const cors = require('cors')
@@ -13,20 +14,35 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); 
 
-app.get('/', async (req, res) => {
+app.get('/fetch-genres', async (req, res) => {
     const numberOfGenres = Number(req.query.number_of_genres);
 
     try {
         const genres = await GetGenres(numberOfGenres);
+        console.log(genres);
         res.send(genres);
     }
     catch (error) {
-        console.error("ERROR FETCHING GENRES\n", error);
+        console.error("Error fetching genres\n", error);
         res.sendStatus(500);
     }
 });
 
-app.post('/create', async (req, res) => {
+app.get('/fetch-lobbies', async (req, res) => {
+    const numberOfLobbies = Number(req.query.number_of_lobbies);
+    console.log('hii')
+    try {
+        const lobbies = await GetLobbies(numberOfLobbies);
+        console.log(lobbies)
+        res.send(lobbies);
+    }
+    catch (error) {
+        console.error("Error fetching lobbies\n", error);
+        res.sendStatus(500);
+    }
+});
+
+app.post('/create-lobby', async (req, res) => {
     const requestParams = req.body.params;
 
     try {
@@ -34,7 +50,7 @@ app.post('/create', async (req, res) => {
         res.sendStatus(200);
     }
     catch (error) {
-        console.error('ERROR ADDING LOBBY TO DATABASE\n', error);
+        console.error('Error adding lobby to database\n', error);
         res.sendStatus(500);
     }
 });

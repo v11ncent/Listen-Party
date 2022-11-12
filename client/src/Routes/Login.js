@@ -7,16 +7,14 @@ const Login = () => {
         return <div>Add a spinner</div>;
     };
 
-    if (!isAuthenticated) {
-        return (
-            <main>
-                <h1>Please log in</h1>
-                <button onClick={ () => loginWithRedirect() }>
-                    Log In
-                </button>
-            </main>
-        );
-    };
+    return (
+        <main>
+            <h1>Please log in</h1>
+            <button onClick={ () => loginWithRedirect() }>
+                Log In
+            </button>
+        </main>
+    );
 };
 
 export default Login;

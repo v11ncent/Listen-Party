@@ -1,9 +1,19 @@
+import { useState, useEffect } from 'react';
+import FetchLobbies from '../Functions/FetchLobbies';
 import Lobby from './Lobby';
 
-const Lobbies = (props) => {
-    const lobbies = [{ name: 'Lobby 1', people: 5, genres: ['Electronic', 'DnB'] }, { name: 'Lobby 1', people: 5, genres: ['Electronic', 'DnB'] }, { name: 'Lobby 1', people: 5, genres: ['Electronic', 'DnB'] }, { name: 'Lobby 1', people: 5, genres: ['Electronic', 'DnB'] }, { name: 'Lobby 1', people: 5, genres: ['Electronic', 'DnB'] }, { name: 'Lobby 1', people: 5, genres: ['Electronic', 'DnB'] }, { name: 'Lobby 1', people: 5, genres: ['Electronic', 'DnB'] }, { name: 'Lobby 1', people: 5, genres: ['Electronic', 'DnB'] }, { name: 'Lobby 1', people: 5, genres: ['Electronic', 'DnB'] }, { name: 'Lobby 1', people: 5, genres: ['Electronic', 'DnB'] }, { name: 'Lobby 1', people: 5, genres: ['Electronic', 'DnB'] }];
-    const lobbyList = lobbies.map((lobby) =>  
-        <Lobby name={ lobby.name } people={ lobby.people } genres={ lobby.genres } />
+const Lobbies = () => {
+    const [lobbies, setLobbies] = useState([]);
+    let lobbyList = [];
+    
+    useEffect(() => {
+        FetchLobbies(2).then((res) => {
+            setLobbies(res);
+        });
+    }, []);
+
+    lobbyList = lobbies.map((lobby) =>
+        <Lobby name = { lobby.lobby_name } />
     );
 
     return <ul className="lobbies__list">{ lobbyList }</ul>;

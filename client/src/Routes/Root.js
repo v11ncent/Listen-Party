@@ -1,5 +1,5 @@
 import { useAuth0 } from '@auth0/auth0-react';
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import Login from './Login';
 import Lougout from './Logout';
 import Main from './Main';
@@ -7,11 +7,7 @@ import Main from './Main';
 const Root = () => {
     const { isAuthenticated } = useAuth0();
 
-    if (isAuthenticated) {
-        return <Outlet />;
-    }
-
-    return <Login />;
+    return <Outlet />;
 }
 
 export default Root;

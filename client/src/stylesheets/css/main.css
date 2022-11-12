@@ -178,6 +178,9 @@ input {
   position: relative;
   cursor: pointer;
 }
+.lobby a {
+  color: white;
+}
 .lobby__image {
   max-height: 18rem;
   border-radius: inherit;

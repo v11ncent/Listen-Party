@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import lobbyBackgroundImage from '../media/lobby-background.jpg';
 
 const Lobby = (props) => {
@@ -13,14 +14,16 @@ const Lobby = (props) => {
 
     return (
         <li className="lobby">
-            <img src={ lobbyBackgroundImage } className="lobby__image"/>
-            <div className="lobby__meta">
-                <h2 className="meta__name">{ name }</h2>
-                <p className="meta__people">{ `${people} listeners` }</p>
-                <ul className="meta__genres hide-scrollbar">
-                    { genreList }
-                </ul>
-            </div>
+            <Link to = {`/lobby/1`}>
+                <img src={ lobbyBackgroundImage } className="lobby__image"/>
+                <section className="lobby__meta">
+                    <h2 className="meta__name">{ name }</h2>
+                    <p className="meta__people">{ `${people} listeners` }</p>
+                    <ul className="meta__genres hide-scrollbar">
+                        { genreList }
+                    </ul>
+                </section>
+            </Link>
         </li>
     );
 }

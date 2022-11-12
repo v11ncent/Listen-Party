@@ -1,29 +1,26 @@
 import { useState, useEffect } from 'react';
-import GetGenres from '../Functions/GetGenres';
+import FetchGenres from '../Functions/FetchGenres';
 import RandomColor from '../Functions/RandomColor';
 
 const Genres = () => {
     const [genres, setGenres] = useState([]);
-    let genresList = [];
+    let genreList = [];
 
     useEffect(() => {
-        const fetchGenres = async (numberOfGenres) => {
-            setGenres(await GetGenres(numberOfGenres));
-        }
-
-        fetchGenres(10);
+        FetchGenres(10).then((res) => {
+            console.log(res)
+            setGenres(res);
+        });
     }, []);
 
-    console.log(genres);
-
-    genresList = genres.map((genre) =>
+    genreList = genres.map((genre) =>
         <li className="genre" key={ genre.genre_id } style={{ backgroundColor: RandomColor('red', 0.75) }}>
             <p>{ genre.genre_name }</p>
         </li>
     );
 
     return (
-        <ul className="genres__list hide-scrollbar">{ genresList }</ul>
+        <ul className="genres__list hide-scrollbar">{ genreList }</ul>
     );
 }
 
