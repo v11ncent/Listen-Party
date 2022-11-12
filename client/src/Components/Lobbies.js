@@ -4,7 +4,7 @@ import Lobby from './Lobby';
 
 const Lobbies = () => {
     const [lobbies, setLobbies] = useState([]);
-    let lobbyList = [];
+    let lobbyArray = [];
     
     useEffect(() => {
         FetchLobbies(2).then((res) => {
@@ -12,11 +12,11 @@ const Lobbies = () => {
         });
     }, []);
 
-    lobbyList = lobbies.map((lobby) =>
-        <Lobby name = { lobby.lobby_name } />
+    lobbyArray = lobbies.map((lobby) =>
+        <Lobby key = { lobby.lobby_id } id = { lobby.lobby_id } name = { lobby.lobby_name } />
     );
 
-    return <ul className="lobbies__list">{ lobbyList }</ul>;
+    return <ul className="lobbies__list">{ lobbyArray }</ul>;
 }
 
 export default Lobbies;

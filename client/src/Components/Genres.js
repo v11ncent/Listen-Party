@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import FetchGenres from '../Functions/FetchGenres';
-import RandomColor from '../Functions/RandomColor';
+import Genre from './Genre';
 
 const Genres = () => {
     const [genres, setGenres] = useState([]);
@@ -8,17 +8,14 @@ const Genres = () => {
 
     useEffect(() => {
         FetchGenres(10).then((res) => {
-            console.log(res)
             setGenres(res);
         });
     }, []);
 
     genreList = genres.map((genre) =>
-        <li className="genre" key={ genre.genre_id } style={{ backgroundColor: RandomColor('red', 0.75) }}>
-            <p>{ genre.genre_name }</p>
-        </li>
+        <Genre key = { genre.genre_id } name = { genre.genre_name } />
     );
-
+    
     return (
         <ul className="genres__list hide-scrollbar">{ genreList }</ul>
     );

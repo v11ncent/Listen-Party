@@ -6,7 +6,6 @@ async function GetLobbies(numberOfLobbies) {
    lobbiesArray = [];
    
    await Lobby.findAll({
-      order: Sequelize.literal('rand()'), 
       limit: numberOfLobbies
    }).then((lobby) => {
       lobby.forEach((lobby) => { lobbiesArray.push({ lobby_id: lobby.lobby_id, lobby_name: lobby.lobby_name }) });

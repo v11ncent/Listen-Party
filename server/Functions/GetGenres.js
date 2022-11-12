@@ -6,12 +6,12 @@ async function GetGenres(numberOfGenres) {
    genresArray = [];
    
    await Genre.findAll({
-      attributes: [
-         // Doesn't actually grab distinct values, fix later.
-         [sequelize.fn('DISTINCT', sequelize.col('genre_id')), 'genre_id'],
-         'genre_name'
-      ],
-      order: Sequelize.literal('rand()'), 
+      // attributes: [
+      //    // Doesn't actually grab distinct values, fix later.
+      //    [sequelize.fn('DISTINCT', sequelize.col('genre_id')), 'genre_id'],
+      //    'genre_name'
+      // ],
+      // order: Sequelize.literal('rand()'), 
       limit: numberOfGenres 
    }).then((genres) => {
       genres.forEach((genre) => { genresArray.push({ genre_id: genre.genre_id, genre_name: genre.genre_name }) });
