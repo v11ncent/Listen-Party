@@ -11,7 +11,6 @@ const FetchLobbies = (numberOfLobbies) => {
     }
     catch (error) {
         console.error('Could not fetch lobbies\n', error.toJSON());
-        return [];
     }
 }
 

@@ -11,7 +11,6 @@ const FetchGenres = (numberOfGenres) => {
     }
     catch (error) {
         console.error('Could not fetch genres\n', error.toJSON());
-        return [];
     }
 }
 

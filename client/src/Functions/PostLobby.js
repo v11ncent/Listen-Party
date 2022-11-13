@@ -6,7 +6,7 @@ const PostLobby = async (props) => {
         genres: [...props.genres]
     };
 
-    const res = await axios.post('http://localhost:8080/create', { params }).then((res) => res.data);
+    const res = await axios.post('http://localhost:8080/create-lobby', { params }).then((res) => res.data);
     return res;
 }
 

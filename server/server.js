@@ -19,8 +19,7 @@ app.get('/fetch-genres', async (req, res) => {
 
     try {
         const genres = await GetGenres(numberOfGenres);
-        console.log(genres);
-        res.send(genres);
+        res.json(genres);
     }
     catch (error) {
         console.error("Error fetching genres\n", error);
@@ -30,11 +29,10 @@ app.get('/fetch-genres', async (req, res) => {
 
 app.get('/fetch-lobbies', async (req, res) => {
     const numberOfLobbies = Number(req.query.number_of_lobbies);
-    console.log('hii')
+
     try {
         const lobbies = await GetLobbies(numberOfLobbies);
-        console.log(lobbies)
-        res.send(lobbies);
+        res.json(lobbies);
     }
     catch (error) {
         console.error("Error fetching lobbies\n", error);

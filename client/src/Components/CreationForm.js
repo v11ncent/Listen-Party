@@ -31,7 +31,7 @@ const CreationForm = () => {
     }
 
     return (
-        <form action="http://localhost:8080/create" method="post" className="form" onSubmit={ handleSubmit }>
+        <form className="form" onSubmit={ handleSubmit }>
             <TextInput 
                 name = "name" 
                 label = "Lobby name" 
