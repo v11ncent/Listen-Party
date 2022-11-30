@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import FetchLobbies from '../Functions/FetchLobbies';
 import Lobby from './Lobby';
+import CreationForm from './CreationForm';
+
 
 const Lobbies = () => {
     const [lobbies, setLobbies] = useState([]);
@@ -11,13 +13,13 @@ const Lobbies = () => {
             setLobbies(res);
         });
     }, []);
-
+    
     lobbyArray = lobbies.map((lobby) =>
         <Lobby 
             key = { lobby.lobby_id } 
             id = { lobby.lobby_id } 
             name = { lobby.lobby_name }
-            genre = { lobby.lobby_genre.genre_type }
+            genre = { lobby.lobby_genre.genre_name }
         />
     );
 

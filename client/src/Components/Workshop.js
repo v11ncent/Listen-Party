@@ -1,6 +1,6 @@
 import CreationForm from './CreationForm';
 
-const Workshop = () => {
+const Workshop = (props) => {
     return (
         <div>
             <section className="chat">
@@ -9,7 +9,7 @@ const Workshop = () => {
             <section className="creation">
                 <h3 className="creation__title">Create a lobby</h3>
                 <p className="creation__description">Create a name, add some genres, and start listening to music</p>
-                <CreationForm />
+                <CreationForm setFormSubmitted = { props.setFormSubmitted } formSubmitted = { props.formSubmitted } />
             </section>
             <section className="account">
                 <h4 className="hide-visually">Login</h4>

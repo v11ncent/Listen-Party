@@ -7,17 +7,17 @@ import CheckboxInput from "./CheckboxInput";
 
 const initialValues = { 
     name: 'Lobby', 
-    genres: [{ genre_id: 1, genre_name: 'Ambient' }] 
+    genres: [{ genre_id: 1, genre_name: 'Ambient' }]
 };
 
-const CreationForm = () => {
+const CreationForm = (props) => {
     const [values, setValues] = useState(initialValues);
     
     const handleInputChange = (event) => {
         const target = event.target;
         const name = target.name;
         const value = target.type === 'checkbox' ? target.checked : target.value;
-
+        
         setValues({
             ...values,
             [name]: value
@@ -27,6 +27,7 @@ const CreationForm = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         await PostLobby(values);
+        props.setFormSubmitted(true);
         setValues(initialValues);
     }
 

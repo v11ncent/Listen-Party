@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import Root from './Routes/Root';
 import Error from './Routes/Error';
 import Login from './Routes/Login';
-import Main from './Routes/Main';
+import App from './Routes/App';
 import { Auth0Provider } from '@auth0/auth0-react';
 import {
   createBrowserRouter,
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/app",
-        element: <Main />
+        element: <App />
       },
       {
         path: "/lobby/:lobbyId",
