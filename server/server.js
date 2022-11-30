@@ -32,6 +32,7 @@ app.get('/fetch-lobbies', async (req, res) => {
 
     try {
         const lobbies = await GetLobbies(numberOfLobbies);
+        console.log(lobbies);
         res.json(lobbies);
     }
     catch (error) {

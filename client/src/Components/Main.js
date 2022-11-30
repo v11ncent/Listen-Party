@@ -1,8 +1,12 @@
+import { useState } from 'react';
 import Genres from '../Components/Genres';
 import Lobbies from '../Components/Lobbies';
 import Workshop from '../Components/Workshop';
 
 const Main = () => {
+    const [formSubmitted, setFormSubmitted] = useState(false);
+    console.log(formSubmitted)
+    
     return (
         <div className="main">
             <header className="navigation">
@@ -15,7 +19,7 @@ const Main = () => {
                 <Lobbies />
             </main>
             <section className="workshop">
-                <Workshop />
+                <Workshop setFormSubmitted = { setFormSubmitted } formSubmitted = { formSubmitted } />
             </section>
         </div>
     );
