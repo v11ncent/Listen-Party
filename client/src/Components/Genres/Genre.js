@@ -1,4 +1,4 @@
-import RandomColor from '../Functions/RandomColor';
+import RandomColor from './Functions/RandomColor';
 
 const Genre = (props) => {
     const name = props.name;

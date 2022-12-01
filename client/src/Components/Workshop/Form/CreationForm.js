@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import PostLobby from "../Functions/PostLobby";
 import TextInput from "./TextInput";
 import CheckboxInput from "./CheckboxInput";

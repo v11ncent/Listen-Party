@@ -1,4 +1,4 @@
-import CreationForm from './CreationForm';
+import CreationForm from './Form/CreationForm';
 
 const Workshop = (props) => {
     return (

@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Genres from '../Components/Genres';
-import Lobbies from '../Components/Lobbies';
-import Workshop from '../Components/Workshop';
+import Genres from '../Components/Genres/Genres';
+import Lobbies from '../Components/Lobbies/Lobbies';
+import Workshop from '../Components/Workshop/Workshop';
 
 const Main = () => {
     const [formSubmitted, setFormSubmitted] = useState(false);

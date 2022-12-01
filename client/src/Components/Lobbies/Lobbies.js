@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
-import FetchLobbies from '../Functions/FetchLobbies';
+import FetchLobbies from './Functions/FetchLobbies';
 import Lobby from './Lobby';
-import CreationForm from './CreationForm';
 
 
 const Lobbies = () => {

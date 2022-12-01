@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import lobbyBackgroundImage from '../media/lobby-background.jpg';
+import lobbyBackgroundImage from '../../media/lobby-background.jpg';
 
 const Lobby = (props) => {
     const id = props.id;

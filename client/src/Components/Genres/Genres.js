@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import FetchGenres from '../Functions/FetchGenres';
+import FetchGenres from './Functions/FetchGenres';
 import Genre from './Genre';
 
 const Genres = () => {
