@@ -22,8 +22,3 @@ const Genres = () => {
 }
 
 export default Genres;
-
-// setInterval(() => fetchGenres(10), 5000);
-// const randomNumber = (maxNumber) => {
-//     return Math.floor(Math.random() * (maxNumber - 5) + 5);
-// }
