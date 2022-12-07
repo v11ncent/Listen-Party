@@ -4,7 +4,6 @@
     min-width: max-content;
     background-color: $background-color-lobby;
     position: relative;
-    cursor: pointer;
 
     a {
         color: white;
@@ -34,18 +33,10 @@
 
         .meta__genres {
             @include flex-item(row, flex-start, flex-start);
-
-            max-width: 100%;
-            overflow: auto;
-
+            
             .genre {
                 padding: 0.2em 1em;
-                margin: 0 0.25em;
                 background-color: rgb(255, 255, 255, 0.15);
-
-                &:hover {
-                    filter: brightness(1);
-                }
             }
         }
     }

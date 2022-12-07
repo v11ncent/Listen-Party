@@ -15,10 +15,10 @@ const Lobbies = () => {
     
     lobbyArray = lobbies.map((lobby) =>
         <Lobby 
-            key = { lobby.lobby_id } 
-            id = { lobby.lobby_id } 
-            name = { lobby.lobby_name }
-            genre = { lobby.lobby_genre.genre_name }
+            key={ lobby.lobby_id } 
+            id={ lobby.lobby_id } 
+            name={ lobby.lobby_name }
+            genre={ lobby.lobby_genre.genre_name }
         />
     );
 
