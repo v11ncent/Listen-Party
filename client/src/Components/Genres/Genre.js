@@ -1,12 +1,12 @@
-import RandomColor from './Functions/RandomColor';
+import RandomColor from "./Functions/RandomColor";
 
 const Genre = (props) => {
-    return (
-        <li className="genre">
-            <p>{ props.name }</p>
-        </li>
-    );
-}
+  return (
+    <li className="genre">
+      <p>{props.name}</p>
+    </li>
+  );
+};
 
 export default Genre;
 
